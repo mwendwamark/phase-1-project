@@ -3,7 +3,7 @@ const quotesUrl = "http://localhost:3000/quotes"
 // Fetch all quotes
 async function fetchQuotes() {
   const response = await fetch(quotesUrl)
-  const quotes = await response.json()
+  const quotes =  response.json()
   return quotes
 }
 
