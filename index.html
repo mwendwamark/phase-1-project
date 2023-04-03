@@ -1,16 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Quote App</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Quote App</h1>
+    </header>
 
+    <main>
+      <form>
+        <div>
+          <label for="quote">Quote:</label>
+          <input type="text" id="quote" name="quote" required  placeholder="Your Quote"/>
+        </div>
+        <div>
+          <label for="author">Author:</label>
+          <input type="text" id="author" name="author" required  placeholder="Your Name"/>
+        </div>
+        <button type="submit" id="add-quote-btn">Add Quote</button>
+      </form>
 
-  <script src="script.js"></script>  
-</body>
+      <ul id="quote-list"></ul>
+    </main>
+
+    <footer>
+     
+    </footer>
+
+    <script src="app.js"></script>
+  </body>
 </html>
