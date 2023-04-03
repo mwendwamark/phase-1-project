@@ -7,33 +7,36 @@
   </head>
   <body>
     <header>
-      <h1>Quote App</h1>
+      <h1> Stranger Things Quote App</h1>
+      <p>You can add any quote you can remeber from the TV. show Stranger Things.
+        <br>
+      You can also search for a character's name to see some of the quotes said by the character
+      </p>
+      <form>
+        <label for="search-input">Search:</label>
+        <input type="search" id="search-input" name="search" placeholder="Search. name or character..">
+        <button type="submit">Search</button>
+      </form>
     </header>
 
     <main>
       <form>
         <div>
           <label for="quote">Quote:</label>
-          <input type="text" id="quote" name="quote" required  placeholder="Your Quote"/>
+          <input type="text" id="quote" name="quote" required  placeholder="Your Favourite Quote"/>
         </div>
         <div>
           <label for="author">Author:</label>
-          <input type="text" id="author" name="author" required  placeholder="Your Name"/>
+          <input type="text" id="author" name="author" required  placeholder="Author's Name"/>
         </div>
         <button type="submit" id="add-quote-btn">Add Quote</button>
-        <div>
-          <label for="delete"> Delete Quote</label>
-
-        </div>
-        <button type="submit" id="delete-btn"> Delete Quote</button>
+        
       </form>
 
       <ul id="quote-list"></ul>
     </main>
 
-    <footer>
-     
-    </footer>
+   
 
     <script src="script.js"></script>
   </body>
