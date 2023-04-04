@@ -1,78 +1,78 @@
-// Define a variable to store the list of quotes
-let quotes = [];
 
+document.addEventListener('DOMContentLoaded', () => {
 
-const quoteForm = document.querySelector('form');
-const quoteList = document.querySelector('#quote-list');
-quoteForm.addEventListener('submit', function(event) {
-  event.preventDefault();
   
-  
-  const quoteInput = document.querySelector('#quote');
-  const authorInput = document.querySelector('#author');
-  const quoteText = quoteInput.value;
-  const authorText = authorInput.value;
-  
+  const fetchQuotes = () => {
+    fetch('http://localhost:3000/quotes')
 
-  const newQuote = {
-    quote: quoteText,
-    author: authorText
+      .then(response => response.json())
+      .then(data => {
+      
+        console.log(data);
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
   };
-  quotes.push(newQuote);
-  
-  // Clear the form inputs
-  quoteInput.value = '';
-  authorInput.value = '';
-  
-  // Update the quote list on the page
-  renderQuotes();
-});
 
-// Add an event listener to the quote list to handle delete button clicks
-quoteList.addEventListener('click', function(event) {
-  if (event.target.classList.contains('delete-btn')) {
-    // Get the index of the quote in the array
-    const quoteIndex = event.target.parentElement.dataset.index;
-    
-    // Remove the quote from the array
-    quotes.splice(quoteIndex, 1);
-    
-    // Update the quote list on the page
-    renderQuotes();
-  }
-});
+  //Adding a new quote to the server
+  const addQuote = (newQuote) => {
+    fetch('http://localhost:3000/quotes', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(newQuote)
+    })
+      .then(response => response.json())
+      .then(data => {
+      
+        console.log(data);
+      })
+      .catch(error => {
+        console.log(error);
+      });
+  };
 
-// Define a function to render the quotes on the page
-function renderQuotes() {
-  // Clear the existing quote list
-  quoteList.innerHTML = '';
+  // Updating a quote on the server
+  const updateQuote = (quoteToUpdate, updatedQuote) => {
+    fetch(`http://localhost:3000/quotes/${quoteToUpdate}`, {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(updatedQuote)
+    })
+      .then(response => response.json())
+      .then(data => {
+      
+        console.log(data);
+      })
+      .catch(error => {
+        console.log(error.message);
+      });
+  };
+
+  //Removing a quote from the server
+  const deleteQuote = (quoteToDelete) => {
+    fetch(`http://localhost:3000/quotes/${quoteToDelete}`, {
+      method: 'DELETE'
+    })
+      .then(response =>  response.json())
+      .then(data =>{
+        console.log(data)
+      })
+
+      .catch(error => {
+        console.error('Error deleting quote:', error);
+      });
+  };
+
   
-  // Loop through the quotes array and create a list item for each quote
-  for (let i = 0; i < quotes.length; i++) {
-    const quote = quotes[i];
-    
-    // Create the list item element and set its dataset index to the current index in the array
-    const li = document.createElement('li');
-    li.dataset.index = i;
-    
-    // Create the quote and author elements and add them to the list item
-    const quoteText = document.createElement('span');
-    quoteText.textContent = quote.quote;
-    const authorText = document.createElement('span');
-    authorText.textContent = quote.author;
-    li.appendChild(quoteText);
-    li.appendChild(authorText);
-    
-    // Create the delete button element and add it to the list item
-    const deleteBtn = document.createElement('button');
-    deleteBtn.textContent = 'Delete';
-    deleteBtn.classList.add('delete-btn');
-    li.appendChild(deleteBtn);
-    
-    // Add the list item to the quote list
-    quoteList.appendChild(li);
-  }
-}
+fetchQuotes();
 
-// Call the renderQuotes function initially to display any existing quotes
-renderQuotes();
+
+})
+
+
+  
