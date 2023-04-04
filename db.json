@@ -1,24 +1,62 @@
 {
   "quotes": [
     {
-      "quote": "We’re just friends.",
-      "author": "Robin Buckley"
+      "quote": "Friends don't lie",
+      "author": "Eleven"
     },
     {
-      "quote": "Our children don’t live here anymore. You didn’t know that?",
-      "author": "Ted Wheeler"
+      "quote": "Mornings are for coffee and contemplation.?",
+      "author": "Hopper"
     },
     {
-      "quote": "I felt this evil like it was looking at me.",
-      "author": "Will Byers"
+      "quote": "If anyone asks where I am, I've left the country.",
+      "author": "Mike"
     },
     {
-      "quote": "The demogorgon – it got me. See you tomorrow.",
-      "author": "Will Byers"
+      "quote": "You shouldn't like things because people tell you you're supposed to.",
+      "author": "Jonathan"
     },
     {
-      "quote": "This is finger lickin’ good.",
-      "author": "Steve Harrington"
+      "quote": "Nobody normal ever accomplished anything meaningful in this world",
+      "author": "Jonathan"
+    },
+    {
+      "quote":"I am on a curiosity voyage, and I need my paddles to travel. These books…these books are my paddles",
+      "author":"Dustin"
+    },
+    {
+      "quote":"Science is neat, but I'm afraid it's not very forgiving.",
+      "author":"Mr Clarke"
+    },
+    {
+      "quote":"Ask for forgiveness, not permission",
+      "author":"Nancy"
+    },
+    {
+      "quote":"You keep trying things on until something feels like you.",
+      "author":"Max"
+    },
+    {
+      "quote":"Use the shampoo and conditioner and when your hair’s damp, not wet, okay? When it’s damp, you do four puffs of the Farrah Fawcett spray.",
+      "author":"Steve"
+    },
+    {
+      "quote":"You can't spell America wihtout Erica",
+      "author":"Erica"
+      
+    },
+    {
+      "quote":"My fingers are like arrows! My arms, like iron! My feet, like spears! Resist, and I will end you",
+      "author":"Murry"
+    },
+    {
+      "quote":"I need this phone and two weeks' advance. And a pack of Camels",
+      "author":"Joyce"
+    },
+    {
+      "quote":"When you’re different, sometimes you feel like a mistake. But you make her feel like she’s not a mistake at all. Like she’s better for being different.",
+      "author":"Will"
     }
+    
   ]
 }
