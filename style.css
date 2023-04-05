@@ -134,3 +134,6 @@ main {
 .fa-heart.active {
   color: red;
 }
+button[type="submit"]:hover{
+  color: aquamarine;
+}

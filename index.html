@@ -11,7 +11,7 @@
       <p>
         You can add any quote you can remember from the TV show Stranger Things.
         <br />
-        You can also search for a character's name to see some of the quotes said by the character.
+       Feel free to add any quote you can remember in the input field below 
       </p>
       <form>
         <label for="author"></label>
@@ -27,79 +27,6 @@
       <ul id="quote-list"></ul>
     </main>
 
-    <script>
-      const quoteList = document.querySelector('#quote-list');
-
-      async function getQuotes() {
-        const response = await fetch('http://localhost:3000/quotes');
-        const quotes = await response.json();
-        return quotes;
-      }
-
-      async function addQuote(author, quote) {
-        const response = await fetch('http://localhost:3000/quotes', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({ author, quote })
-        });
-        const newQuote = await response.json();
-        return newQuote;
-      }
-
-      async function deleteQuote(id) {
-        const response = await fetch(`http://localhost:3000/quotes/${id}`, {
-          method: 'DELETE'
-        });
-        const deletedQuote = await response.json();
-        return deletedQuote;
-      }
-
-      function renderQuote(quote) {
-        const li = document.createElement('li');
-        li.innerHTML = `
-          <h3>${quote.author}</h3>
-          <p>${quote.quote}</p>
-          <button class="delete-button" data-id="${quote.id}">Delete</button>
-        `;
-        quoteList.appendChild(li);
-      }
-
-      async function renderQuotes() {
-        quoteList.innerHTML = '';
-        const quotes = await getQuotes();
-        quotes.forEach(renderQuote);
-      }
-
-      async function handleSubmit(event) {
-        event.preventDefault();
-        const authorInput = document.querySelector('#author');
-        const quoteInput = document.querySelector('#quote');
-        const author = authorInput.value;
-        const quote = quoteInput.value;
-        await addQuote(author, quote);
-        authorInput.value = '';
-        quoteInput.value = '';
-        await renderQuotes();
-      }
-
-      async function handleDelete(event) {
-        if (event.target.classList.contains('delete-button')) {
-          const id = event.target.dataset.id;
-          await deleteQuote(id);
-          await renderQuotes();
-        }
-      }
-
-      const form = document.querySelector('form');
-      form.addEventListener('submit', handleSubmit);
-
-      quoteList.addEventListener('click', handleDelete);
-
-      (async function init() {
-        await renderQuotes();
-      })();
-    </script>
+   <script src="script.js"></script>
   </body>
 </html>

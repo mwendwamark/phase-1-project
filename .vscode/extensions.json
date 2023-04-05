@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "blackboxapp.blackbox"
+        "blackboxapp.blackbox",
+        "otris-software.vscode-janus-debug"
     ]
 }
