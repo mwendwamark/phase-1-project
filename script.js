@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded',()=>{
 const quoteList = document.querySelector('#quote-list');
 const quotes = {
   "quotes": [
@@ -177,4 +178,5 @@ quotes.quotes.forEach(quote => {
 
     
   });
+})
   
