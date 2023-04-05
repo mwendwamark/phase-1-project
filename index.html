@@ -13,20 +13,37 @@
         <br />
        Feel free to add any quote you can remember in the input field below 
       </p>
-      <form>
+      <!-- <form>
         <label for="author"></label>
         <input type="text" id="author" required placeholder="Author's Name"/>
         <label for="quote"></label>
         <input type="text" id="quote" required  placeholder="Enter Quote"/>
         <button type="submit">Add Quote</button>
-      </form>
+      </form> -->
       <img src="https://cdn.europosters.eu/image/750/posters/stranger-things-one-sheet-i68134.jpg" alt="Stranger Things Poster" />
     </header>
 
     <main>
       <ul id="quote-list"></ul>
     </main>
-
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <form>
+            <div class="form-group">
+              <label for="quote-input">Quote</label>
+              <input type="text" class="form-control" id="quote-input" placeholder="Enter quote">
+            </div>
+            <div class="form-group">
+              <label for="author-input">Author</label>
+              <input type="text" class="form-control" id="author-input" placeholder="Enter author name">
+            </div>
+            <button type="submit" class="btn btn-primary">Add Quote</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    
    <script src="script.js"></script>
   </body>
 </html>
