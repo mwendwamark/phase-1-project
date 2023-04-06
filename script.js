@@ -139,9 +139,8 @@ function addQuote(e) {
   authorInput.value = '';
 }
 
-quotes.quotes.forEach(quote => {
-  
-});
+
+
 
 const addQuoteForm = document.querySelector('form');
 addQuoteForm.addEventListener('submit', addQuote);
