@@ -14,7 +14,7 @@ To set up the project on your local machine, follow these steps:
 2.Open the index.html file in a web browser to view the application.
 3.To make changes to the code, open the project directory in a code editor of your choice.
 4.Link to Live Site on GitHub Pages
-5.The Stranger Things Quote App is live on GitHub Pages.
+5.The Stranger Things Quote App is live using this link https://mwendwamark.github.io/phase-1-project/.
 
 # Copyright and License Information
 This project is licensed under the MIT License.

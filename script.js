@@ -154,7 +154,7 @@ quotes.quotes.forEach(quote => {
     quoteText.classList.add('blockquote');
   
     const quoteQuote = document.createElement('p');
-    // quoteQuote.classList.add('mb-0');
+     quoteQuote.classList.add('mb-0');
     quoteQuote.textContent = quote.quote;
   
     const quoteAuthor = document.createElement('footer');
